@@ -12,10 +12,12 @@ app.use(
     credentials: true,
   })
 );
-
 app.use(express.json());
-
 app.use(cookieParser());
+
+app.get("/", (_, res) => {
+  res.send("SkillBridge AI Backend is Running 🚀");
+});
 
 app.get("/api/v1", (_, res) => {
   res.json({
